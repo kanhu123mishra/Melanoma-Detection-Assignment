@@ -1,51 +1,60 @@
-# Melanoma-Detection-Assignment
+## Melanoma Detection Assignment 
 
-This repository is created as a part of the Melanoma Detection Assignment Module required for Melanoma Detection Assignment
-o build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
+This repository is created as a part of the Melanoma Detection Assignment Module required for Melanoma Detection Assignment to build a CNN-based model that can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early, accounting for 75% of skin cancer deaths. A solution capable of evaluating images and alerting dermatologists about the presence of melanoma has the potential to reduce a significant amount of manual effort needed in diagnosis.
 
+### Dataset Overview
 
-The dataset consists of 2357 images of malignant and benign oncological diseases, which were formed from the International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images, with the exception of melanomas and moles, whose images are slightly dominant.
+The dataset consists of 2357 images of malignant and benign oncological diseases sourced from the International Skin Imaging Collaboration (ISIC). Images were categorized into 9 classes based on ISIC classification. The dataset includes the following classes:
 
+- Actinic keratosis
+- Basal cell carcinoma
+- Dermatofibroma
+- Melanoma
+- Nevus
+- Pigmented benign keratosis
+- Seborrheic keratosis
+- Squamous cell carcinoma
+- Vascular lesion
 
-The data set contains the following 9 class of diseases:
+### Project Pipeline
 
-Actinic keratosis
-Basal cell carcinoma
-Dermatofibroma
-Melanoma
-Nevus
-Pigmented benign keratosis
-Seborrheic keratosis
-Squamous cell carcinoma
-Vascular lesion
+1. **Data Reading/Data Understanding:** Define the path for train and test images.
+   
+2. **Dataset Creation:** Create train & validation datasets from the train directory with a batch size of 32. Resize images to 180x180.
 
-Project Pipeline
-Data Reading/Data Understanding → Defining the path for train and test images 
-Dataset Creation→ Create train & validation dataset from the train directory with a batch size of 32. Also, make sure you resize your images to 180*180.
-Dataset visualisation → Create a code to visualize one instance of all the nine classes present in the dataset 
-Model Building & training : 
-Create a CNN model, which can accurately detect 9 classes present in the dataset. While building the model, rescale images to normalize pixel values between (0,1).
-Choose an appropriate optimiser and loss function for model training
-Train the model for ~20 epochs
-Write your findings after the model fit. You must check if there is any evidence of model overfit or underfit.
-Chose an appropriate data augmentation strategy to resolve underfitting/overfitting 
-Model Building & training on the augmented data :
-Create a CNN model, which can accurately detect 9 classes present in the dataset. While building the model rescale images to normalize pixel values between (0,1).
-Choose an appropriate optimiser and loss function for model training
-Train the model for ~20 epochs
-Write your findings after the model fit, see if the earlier issue is resolved or not?
-Class distribution: Examine the current class distribution in the training dataset 
-- Which class has the least number of samples?
-- Which classes dominate the data in terms of the proportionate number of samples?
-Handling class imbalances: Rectify class imbalances present in the training dataset with Augmentor library.
-Model Building & training on the rectified class imbalance data :
-Create a CNN model, which can accurately detect 9 classes present in the dataset. While building the model, rescale images to normalize pixel values between (0,1).
-Choose an appropriate optimiser and loss function for model training
-Train the model for ~30 epochs
+3. **Dataset Visualization:** Visualize one instance of all nine classes present in the dataset.
+
+4. **Model Building & Training:**
+   - Create a CNN model to accurately detect the 9 classes. Rescale images to normalize pixel values between 0 and 1.
+   - Choose an appropriate optimizer and loss function.
+   - Train the model for approximately 20 epochs.
+   - Write findings after model fit, checking for evidence of overfitting or underfitting.
+
+5. **Data Augmentation:**
+   - Choose an appropriate data augmentation strategy to resolve underfitting/overfitting.
+
+6. **Model Building & Training on Augmented Data:**
+   - Create a CNN model on augmented data.
+   - Train the model for approximately 20 epochs.
+   - Write findings after model fit to see if earlier issues are resolved.
+
+7. **Class Distribution Analysis:**
+   - Examine the current class distribution in the training dataset.
+   - Identify the class with the least number of samples and the classes dominating the data.
+
+8. **Handling Class Imbalances:**
+   - Rectify class imbalances present in the training dataset with Augmentor library.
+
+9. **Model Building & Training on Rectified Class Imbalance Data:**
+   - Create a CNN model on rectified class imbalance data.
+   - Train the model for approximately 30 epochs.
+
 
  The inferences and model results are shared below :
- ![Model Params]([https://github.com/[username]/[reponame]/blob/[branch]/](https://github.com/kanhu123mishra/Melanoma-Detection-Assignment/edit/main/model-stats.png)image.jpg?raw=true)
-![Model Accuracy]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg](https://github.com/kanhu123mishra/Melanoma-Detection-Assignment/edit/main/model-params.png)?raw=true)
+![Model Params](https://github.com/kanhu123mishra/Melanoma-Detection-Assignment/raw/main/model-stats.PNG)
+
+![Model Accuracy](https://github.com/kanhu123mishra/Melanoma-Detection-Assignment/raw/main/model-params.PNG)
+
 
 
 References :
